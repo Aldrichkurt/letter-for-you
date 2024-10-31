@@ -1,0 +1,93 @@
+/* Basic styling for body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0e6ef;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Larger envelope styling */
+  .envelope {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #f7c8d4;
+    border: 1px solid #e1a1b3;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Larger envelope flaps */
+  .flap {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #e1a1b3;
+    transition: transform 0.5s ease;
+    transform-origin: top center;
+  }
+  
+  .flap.top {
+    top: 0;
+    border-radius: 8px 8px 0 0;
+    transform: rotateX(0deg);
+  }
+  
+  .flap.bottom {
+    bottom: 0;
+    border-radius: 0 0 8px 8px;
+    transform: rotateX(0deg);
+  }
+  
+  /* Larger seal design */
+  .seal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #d07e9c;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Larger love letter */
+  .love-letter {
+    position: absolute;
+    width: 85%;
+    height: 75%;
+    top: 12%;
+    left: 7.5%;
+    background-color: white;
+    color: #d07e9c;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .love-letter h2 {
+    margin-top: 0;
+  }
+  
+  @media (min-width: 768px) {
+    /* Further adjustments for larger screens */
+    .envelope {
+      width: 600px;
+      height: 400px;
+    }
+  
+    .love-letter {
+      font-size: 1.2rem;
+    }
+  }
+  
